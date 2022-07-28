@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "i-button": "../../iwiew/weapp/dist/button/index"
+  }
+}

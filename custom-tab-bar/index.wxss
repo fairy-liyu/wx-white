@@ -1,0 +1,5 @@
+/* custom-tab-bar/index.wxss */
+.is-ios{
+  height: env(safe-area-inset-bottom);
+  background-color: #ffffff;
+}
