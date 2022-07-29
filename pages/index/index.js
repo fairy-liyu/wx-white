@@ -17,13 +17,6 @@ Page({
   onShow() {
     
   },
-  // 事件处理函数
-  bindViewTap() {
-    console.log('事件处理')
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
