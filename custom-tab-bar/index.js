@@ -52,10 +52,10 @@ Component({
       wx.switchTab({
         url
       })
+      console.log(url,detail.key)
       this.setData({
         current: detail.key
       });
     }
-
   }
 })
