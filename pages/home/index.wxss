@@ -1,1 +1,7 @@
 /* pages/home/index.wxss */
+page {
+  padding-bottom: 160rpx;
+}
+.card_list {
+  margin-bottom: 20rpx!important;
+}

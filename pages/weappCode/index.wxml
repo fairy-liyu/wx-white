@@ -1,0 +1,5 @@
+<!--pages/weappCode/index.wxml-->
+<!--显示图片用的标签-->
+<image class="code_view" src="{{imagePath}}"></image>
+<!--创建一个画布-->
+<canvas class="canvas-code" canvas-id="myQrcode" style="background:#fff;display:block;" />

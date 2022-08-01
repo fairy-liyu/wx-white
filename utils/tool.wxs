@@ -1,0 +1,16 @@
+//地址
+var URL = "http://10.9.1.183:8890/";
+var imgURL = URL + 'source/miniapp/';
+var uploadImgURL = URL + 'source/res/miniapp/';
+
+var status = {
+  ACTIVE: "开启",
+  INACTIVE: "关闭",
+}
+
+module.exports = {
+  URL,
+  imgURL,
+  uploadImgURL,
+  status,
+}

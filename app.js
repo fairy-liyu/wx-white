@@ -28,7 +28,7 @@ App({
   /**
    * 小程序发生脚本错误或 API 调用报错时触发
    */
-  onError: function(msg) {
+  onError: function (msg) {
     console.log('onError', msg)
   },
   /**

@@ -1,0 +1,5 @@
+/* pages/weappCode/index.wxss */
+.code_view {
+  width: 300rpx;
+  height: 300rpx;
+}

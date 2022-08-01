@@ -1,0 +1,83 @@
+var tool = require("./tool.wxs");
+/**
+ * 获取2018-12-12
+ * @param {*} dateStr 20181212
+ * @param {*} mark -
+ */
+var getFormatDate = function (dateStr, mark) {
+  if (!dateStr) {
+    return;
+  }
+  return dateStr.substring(0, 4) + mark + dateStr.substring(4, 6) + mark + dateStr.substring(6, 8);
+}
+/**
+ * 获取12:12:12
+ * @param {*} timeStr 121212
+ * @param {*} mark :
+ */
+var getFormatTime = function (timeStr, mark) {
+  if (!timeStr) {
+    return;
+  }
+  if (mark) {
+    return timeStr.substring(0, 2) + mark + timeStr.substring(2, 4) + mark + timeStr.substring(4, 6);
+  } else {
+    return;
+  }
+}
+/**
+ * 公用词典翻译
+ */
+var getStatus = function (key) {
+  return tool.status[key];
+}
+/**
+ * 千分位格式化金额
+ * @param {*} num 
+ */
+var moneyFormatter = function (num) {
+  var num = num + '';
+  var d = '';
+  if (num.slice(0, 1) == '-') {
+    d = num.slice(0, 1);
+    num = num.slice(1);
+  }
+  var len = num.length;
+  var index = num.indexOf('.');
+  if (index == -1) {
+    num = num + '.00';
+  } else if ((index + 2) == len) {
+    num = num + '0';
+  }
+  var index = num.indexOf('.'); // 字符出现的位置
+  var num2 = num.slice(-3);
+  num = num.slice(0, index)
+  var result = '';
+  while (num.length > 3) {
+    result = ',' + num.slice(-3) + result;
+    num = num.slice(0, num.length - 3);
+  }
+  if (num) {
+    result = num + result;
+  }
+  return d + (result + num2);
+}
+/**
+ * 手机号脱敏
+ * @param {*} phone 
+ */
+var getFormatPhone = function (phone) {
+  if (!phone) {
+    return;
+  }
+  return phone.substring(0, 3) + '****' + phone.substring(7, 11);
+}
+
+
+module.exports = {
+  getFormatDate,
+  getFormatTime,
+  getStatus,
+  moneyFormatter,
+  getFormatPhone,
+}

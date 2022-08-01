@@ -1,0 +1,39 @@
+<!--pages/code/index.wxml-->
+<view class="background_box">
+  <view class="app_name">四川天府健康通</view>
+  <image class="top_background" src="../../images/bg4.png"></image>
+</view>
+<view style="height: 360rpx;"></view>
+<view class="leader">
+  <image src="../../images/logo.png" class="logo"></image>
+  <i-notice-bar background-color="#ffffff" color="#000000" loop speed='1000'>
+    👉 四川疾控提示健康提示（2022年7月26日20时）【点击查看详情】               👉 【疫案说法】必看！疫情防控30种违法行为，10个案例告诉你法律后果！
+</i-notice-bar>
+  <van-notice-bar color="#000000" background="#ffffff" scrollable text="" />
+</view>
+<view style="margin-top: 40rpx;position: relative;">
+  <image class="pic_view" src="../../images/pic.png"></image>
+  <view class="inner_box">
+    <view class="box">
+      <view class="fangkuai" wx:for="{{newArr}}" style="background-color: {{item}};"></view>
+    </view>
+    
+  </view>
+  <view class="date_view">
+    {{time}}:<text style="font-size: 54rpx;font-weight: 600;">{{time2}}</text><text decode>&nbsp;&nbsp;</text> {{date}}
+  </view>
+  <view class="date2_view">
+    {{dateY}}
+  </view>
+</view>
+<view style="margin-top: 40rpx;position: relative;">
+  <image src="../../images/pic2.png" class="pic2_view"></image>
+</view>
+
+<view class="icon_footer">
+  <van-icon name="info-o" /> 常见问题
+</view>
+<view class="footer_box">
+  <view>四川省应对新型冠状病毒肺炎疫情应急指挥部</view>
+  <view>四川省大数据中心提供支持</view>
+</view>

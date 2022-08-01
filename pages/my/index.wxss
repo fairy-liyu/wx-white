@@ -1,1 +1,8 @@
 /* pages/my/index.wxss */
+.head_pic {
+  overflow: hidden;
+  width: 168rpx;
+  height: 168rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
