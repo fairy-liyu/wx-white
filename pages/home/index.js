@@ -6,19 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cardList: [{
-      title: '卡片标题',
-      label: '额外内容',
-      thumb: 'https://i.loli.net/2017/08/21/599a521472424.jpg',
-      content: '内容',
-      footer: '尾部内容'
-    }, ],
+    cardList: [
+      //   {
+      //   title: '卡片标题',
+      //   label: '额外内容',
+      //   thumb: 'https://i.loli.net/2017/08/21/599a521472424.jpg',
+      //   content: '内容',
+      //   footer: '尾部内容'
+      // }
+    ],
   },
   /**
    * 获取数据
    * @param {*} options 
    */
   getData() {
+    var that = this;
     let param = {
       name: 'yes',
       active: true
@@ -26,7 +29,19 @@ Page({
     // 使用 Mock
     requst.ajax('getdata', param, function (res) {
       //这里既可以获取模拟的res
-      console.log(res)
+      let data = [];
+      res.forEach(item => {
+        data.push({
+          title: item.title,
+          label: item.price,
+          thumb: item.img,
+          content: item.city,
+          footer: item.marketing_start
+        })
+      })
+      that.setData({
+        cardList: data
+      })
     });
   },
   /**

@@ -6,7 +6,8 @@
     "pages/logs/logs",
     "pages/my/index",
     "pages/code/index",
-    "pages/weappCode/index"
+    "pages/weappCode/index",
+    "pages/userinfo/index"
   ],
   "usingComponents": {
     "i-icon": "./iwiew/weapp/dist/icon/index",
@@ -77,7 +78,7 @@
       },
       {
         "pagePath": "pages/index/index",
-        "text": "信息"
+        "text": "联系人"
       },
       {
         "pagePath": "pages/my/index",

@@ -1,8 +1,12 @@
 var apiURL = "http://10.9.1.183:8890/";
 var imgURL = apiURL + 'source/miniapp/';
 var uploadImgURL = apiURL + 'source/res/miniapp/';
-let DEBUG = true;//切换数据入口 false代表接口，true代表mock
+let DEBUG = true; //切换数据入口 false代表接口，true代表mock
 var Mock = require('mock.js')
+const {
+  $Toast
+} = require('../iwiew/weapp/dist/base/index');
+
 function toLogin() {
   wx.navigateTo({
     url: "/pages/login/index"
@@ -23,33 +27,59 @@ function ajax(url, data, callback) {
       url: apiURL + url,
       method: 'POST',
       data: data,
-      header: { "Content-Type": "application/json" },
+      header: {
+        "Content-Type": "application/json"
+      },
       success: function (res) {
-        callback(res);
+        if (res.error_code == '200') {//成功的code
+          callback(res.data);
+        } else {//其他code
+          $Toast({
+            content: res.error_msg
+          });
+        }
       }
     });
   } else {
     // 模拟数据（注@后面是可变参数可以查看mock.js）
     var res = {};
-    if(url == 'getdata') {
+    if (url == 'getdata') {
       res = Mock.mock({
         'error_code': '200',
-        'error_msg': '500',
+        'error_msg': '成功',
         'data|10': [{
           'id|+1': 1,
           'img': "@image('200x100', '#4A7BF7','#fff','pic')",
-          'title': '@ctitle(3,8)',
+          'title': '@ctitle(3,6)',
           'city': "@county(true)",
-          'zip':"@zip(6)",
-          'stock_num': '@integer(0,10)',//库存数量  
+          'zip': "@zip(6)",
+          'stock_num': '@integer(0,10)', //库存数量  
           'marketing_start': '@datetime()',
           'marketing_stop': '@now()',
-          'price': '@integer(100,2000)',//现价，单位：分  
+          'price': '@integer(100,2000)', //现价，单位：分  
           'original_price': '@integer(100,3000)'
         }]
       })
+    } else if(url == 'getPeople') {
+      res = Mock.mock({
+        'error_code': '200',
+        'error_msg': '成功',
+        'data|300': [{
+          'id|+1': 1,
+          'name': '@cname(2,5)',
+          'pinyin|1': ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+          'pic': "@image('100x100', '#4A7BF7','#fff','pic')",
+        }]
+      })
     }
-    callback(res);
+    if (res.error_code == '200') {
+      callback(res.data);
+    } else {
+      $Toast({
+        content: res.error_msg
+      });
+    }
+
   }
 }
 

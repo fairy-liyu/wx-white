@@ -1,6 +1,7 @@
 <!--pages/home/index.wxml-->
+<i-toast id="toast" />
 <view>
-  <i-card wx:for="{{cardList}}" title="{{item.title}}" extra="{{item.label}}" thumb="{{item.thumb}}" i-class="card_list">
+  <i-card wx:for="{{cardList}}" title="{{item.title}}" extra="¥{{item.label}}" thumb="{{item.thumb}}" i-class="card_list">
     <view slot="content">{{item.content}}</view>
     <view slot="footer">{{item.footer}}</view>
   </i-card>

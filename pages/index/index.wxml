@@ -1,25 +1,20 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar">
-        <!-- 显示出微信头像 -->
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <!-- 显示出微信名字 -->
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="i-index-demo">
+    <i-index height="100%" bind:change="onChange">
+        <i-index-item 
+            wx:for="{{ data }}" 
+            wx:for-index="index" 
+            wx:key="{{index}}" 
+            wx:for-item="item" name="{{item.key}}">
+            <view 
+                class="i-index-demo-item" 
+                wx:for="{{item.list}}" 
+                wx:for-index="in" 
+                wx:key="{{in}}" 
+                wx:for-item="it">
+                <image src="{{item.pic}}" class="pic_head"></image>
+                {{it.name}}
+            </view>
+        </i-index-item>
+    </i-index>
 </view>

@@ -1,4 +1,5 @@
 <!--pages/code/index.wxml-->
+<i-toast id="toast" />
 <view class="background_box">
   <view class="app_name">四川天府健康通</view>
   <image class="top_background" src="../../images/bg4.png"></image>
