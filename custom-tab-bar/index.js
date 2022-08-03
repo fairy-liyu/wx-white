@@ -13,11 +13,10 @@ Component({
    */
   data: {
     current: 'home',
-    count: 0,
     urlObj: {
       my: '/pages/my/index',
       index: '/pages/index/index',
-      logs: '/pages/logs/logs',
+      find: '/pages/find/index',
       home: '/pages/home/index',
     }
   },
@@ -31,12 +30,7 @@ Component({
     detached：离开页面节点树。可以清理一些定时器等工作  --  被销毁的时候
     error:  每当组件方法抛错时执行
    */
-  attached() {
-    let count = wx.getStorageSync('logs') ? wx.getStorageSync('logs').length : 0;
-    this.setData({
-      count
-    })
-  },
+  attached() {},
   /**
    * 组件的方法列表
    */

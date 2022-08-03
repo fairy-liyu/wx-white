@@ -7,7 +7,8 @@
     "pages/my/index",
     "pages/code/index",
     "pages/weappCode/index",
-    "pages/userinfo/index"
+    "pages/userinfo/index",
+    "pages/find/index"
   ],
   "usingComponents": {
     "i-icon": "./iwiew/weapp/dist/icon/index",
@@ -73,8 +74,8 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/find/index",
+        "text": "发现"
       },
       {
         "pagePath": "pages/index/index",

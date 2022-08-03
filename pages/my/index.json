@@ -1,8 +1,4 @@
 {
-  "usingComponents": {
-    "i-grid": "../../iwiew/weapp/dist/grid/index",
-    "i-grid-item": "../../iwiew/weapp/dist/grid-item/index",
-    "i-grid-icon": "../../iwiew/weapp/dist/grid-icon/index",
-    "i-grid-label": "../../iwiew/weapp/dist/grid-label/index"
-  }
+  "navigationBarTitleText": "我的",
+  "usingComponents": {}
 }

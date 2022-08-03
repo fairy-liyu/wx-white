@@ -2,7 +2,7 @@
 <i-tab-bar current="{{ current }}" color="#1b9aee" bindchange="handleChange">
     <i-tab-bar-item key="home" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
     <i-tab-bar-item key="index" icon="group" current-icon="group_fill" title="联系人"></i-tab-bar-item>
-    <i-tab-bar-item key="logs" icon="remind" current-icon="remind_fill" count="{{count}}" title="日志"></i-tab-bar-item>
+    <i-tab-bar-item key="find" icon="remind" current-icon="remind_fill" title="发现"></i-tab-bar-item>
     <i-tab-bar-item key="my" icon="mine" current-icon="mine_fill" dot title="我的"></i-tab-bar-item>
   </i-tab-bar>
   <view class="is-ios"></view>

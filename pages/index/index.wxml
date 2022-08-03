@@ -12,7 +12,7 @@
                 wx:for-index="in" 
                 wx:key="{{in}}" 
                 wx:for-item="it">
-                <image src="{{item.pic}}" class="pic_head"></image>
+                <image src="../../images/head.png" class="pic_head"></image>
                 {{it.name}}
             </view>
         </i-index-item>

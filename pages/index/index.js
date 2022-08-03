@@ -27,7 +27,6 @@ Page({
         storeData[index].list.push({
           name: item.name,
           key: firstName,
-          pic: item.pic
         });
       })
     });
