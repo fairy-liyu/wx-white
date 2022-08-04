@@ -1,7 +1,58 @@
 /* pages/home/index.wxss */
 page {
+  box-sizing: border-box;
   padding-bottom: 160rpx;
 }
-.card_list {
-  margin-bottom: 20rpx!important;
+
+.search_view {
+  padding: 0 20rpx 0 20rpx;
+}
+
+.tab_list {
+  width: auto;
+  padding: 0 20rpx;
+}
+
+.box_view {
+  background-color: #eee;
+  padding-top: 20rpx;
+}
+
+.list_view {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.list_view:last-of-type {
+  margin: 0;
+}
+.lv_title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.lv_date {
+  padding: 10rpx 0;
+  font-size: 28rpx;
+  color: #bbb;
+}
+
+.lv_txt {
+  color: #666;
+  display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+.lv_zan {
+  padding-top: 10rpx;
+  color: #bbb;
+  font-size: 28rpx;
+}
+.lv_tag {
+  float: right;
 }

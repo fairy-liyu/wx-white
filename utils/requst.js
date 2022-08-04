@@ -48,16 +48,15 @@ function ajax(url, data, callback) {
         'error_code': '200',
         'error_msg': '成功',
         'data|10': [{
-          'id|+1': 1,
-          'img': "@image('200x100', '#4A7BF7','#fff','pic')",
-          'title': '@ctitle(3,6)',
-          'city': "@county(true)",
-          'zip': "@zip(6)",
-          'stock_num': '@integer(0,10)', //库存数量  
-          'marketing_start': '@datetime()',
-          'marketing_stop': '@now()',
-          'price': '@integer(100,2000)', //现价，单位：分  
-          'original_price': '@integer(100,3000)'
+          'id|+1': 1,//ID
+          'img': "@image('200x100', '#4A7BF7','#fff','pic')",//图片
+          'title': '@ctitle(6,10)',//标题
+          'name': '@ctitle(2,5)',//名字
+          'subhead': '@ctitle(3,6)',//副标题
+          'praise_num': '@integer(0,10)', //点赞人数
+          'comment_num': '@integer(0,10)', //评论人数
+          'date': '@datetime()',
+          'message': '@cparagraph(1, 10)',
         }]
       })
     } else if(url == 'getPeople') {
@@ -69,6 +68,21 @@ function ajax(url, data, callback) {
           'name': '@cname(2,5)',
           'pinyin|1': ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
           'pic': "@image('100x100', '#4A7BF7','#fff','pic')",
+        }]
+      })
+    } else if(url == 'getsubjcetdata') {
+      res = Mock.mock({
+        'error_code': '200',
+        'error_msg': '成功',
+        'data|10': [{
+          'id|+1': 1,//ID
+          'img': "@image('200x100', '#4A7BF7','#fff','pic')",//图片
+          'title': '@ctitle(6,10)',//标题
+          'tag': '@ctitle(2,5)',//tag
+          'class': '@integer(0,10)',//等级
+          'num': '@integer(0,1000)', //购买人数
+          'date': '@datetime()',//日期
+          'price': '@integer(0,100)', //价格
         }]
       })
     }

@@ -1,0 +1,7 @@
+<!--pages/fire/index.wxml-->
+<view>
+  <i-tabs current="{{ tab }}" bindchange="handleChange">
+    <i-tab key="find" title="发现"></i-tab>
+    <i-tab key="focus" title="关注"></i-tab>
+</i-tabs>
+</view>

@@ -1,0 +1,7 @@
+<!--components/input-search/index.wxml 搜索框组件-->
+<view class="input_search">
+  <view class="icon_input">
+    <i-icon color="#ddd" size="20" type="search" />
+  </view>
+  <input class="weui-input" maxlength="50" value="{{ selectValue }}" bindinput="bindKeyInput" placeholder="{{placeholder}}" />
+</view>

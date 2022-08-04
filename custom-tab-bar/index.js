@@ -16,8 +16,9 @@ Component({
     urlObj: {
       my: '/pages/my/index',
       index: '/pages/index/index',
-      find: '/pages/find/index',
+      subject: '/pages/subject/index',
       home: '/pages/home/index',
+      fire: '/pages/fire/index'
     }
   },
   /**

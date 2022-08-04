@@ -1,0 +1,7 @@
+<!--pages/subject/index.wxml-->
+<i-toast id="toast" />
+<view class="tab_view">
+  <i-tabs current="{{ current_scroll }}" scroll bindchange="handleChangeScroll">
+    <i-tab wx:for="{{scrollTab}}" key="{{item.key}}" title="{{item.title}}" i-class="tab_list"></i-tab>
+  </i-tabs>
+</view>

@@ -1,0 +1,5 @@
+/* pages/subject/index.wxss */
+.tab_list {
+  width: auto;
+  padding: 0 20rpx;
+}

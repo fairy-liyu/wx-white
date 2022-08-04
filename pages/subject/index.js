@@ -1,4 +1,4 @@
-// pages/home/index.js
+// pages/subject/index.js
 var requst = require('../../utils/requst.js');
 Page({
 
@@ -6,8 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    selectValue: '',
-    listData: [],
     current_scroll: 'tab1',
     scrollTab: [
       {
@@ -60,11 +58,6 @@ Page({
       },
     ]
   },
-  bindKeyInput(e) {
-    this.setData({
-      selectValue: e.detail
-    })
-  },
   /**
    * 标签页事件
    * @param {*} param0 
@@ -77,7 +70,7 @@ Page({
     });
     this.getData();
   },
-  /**
+/**
    * 获取数据
    * @param {*} options 
    */
@@ -87,7 +80,7 @@ Page({
       name: that.data.current_scroll,
     }
     // 使用 Mock
-    requst.ajax('getdata', param, function (res) {
+    requst.ajax('getsubjcetdata', param, function (res) {
       //这里既可以获取模拟的res
       console.log(res)
       that.setData({
@@ -114,9 +107,8 @@ Page({
    */
   onShow() {
     this.getTabBar().setData({
-      current: 'home'
-    })
-
+      current:'subject'
+    }) 
   },
 
   /**

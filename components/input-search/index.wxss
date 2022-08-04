@@ -1,0 +1,15 @@
+/* components/input-search/index.wxss */
+.input_search {
+  position: relative;
+  padding: 10rpx 0 10rpx 40rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+}
+.icon_input {
+  position: absolute;
+  left: 0;
+  top: 6rpx;
+}
+.weui-input {
+  color: #666;
+}

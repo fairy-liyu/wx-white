@@ -1,11 +1,11 @@
-// pages/find/index.js
+// pages/fire/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tab: 'find'
   },
 
   /**
@@ -19,14 +19,28 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    
   },
+  /**
+   * tab 切换
+   * @param {*} param0 
+   */
+  handleChange({
+    detail
+  }) {
+    this.setData({
+      tab: detail.key
+    });
+  },
+
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    
+    this.getTabBar().setData({
+      current: 'fire'
+    })
   },
 
   /**

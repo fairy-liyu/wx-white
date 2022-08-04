@@ -8,7 +8,9 @@
     "pages/code/index",
     "pages/weappCode/index",
     "pages/userinfo/index",
-    "pages/find/index"
+    "pages/find/index",
+    "pages/fire/index",
+    "pages/subject/index"
   ],
   "usingComponents": {
     "i-icon": "./iwiew/weapp/dist/icon/index",
@@ -74,8 +76,12 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/find/index",
-        "text": "发现"
+        "pagePath": "pages/fire/index",
+        "text": "沸点"
+      },
+      {
+        "pagePath": "pages/subject/index",
+        "text": "课程"
       },
       {
         "pagePath": "pages/index/index",

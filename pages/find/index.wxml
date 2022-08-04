@@ -1,2 +1,3 @@
 <!--pages/find/index.wxml-->
+<i-toast id="toast" />
 <text>pages/find/index.wxml</text>

@@ -1,8 +1,25 @@
 <!--pages/home/index.wxml-->
 <i-toast id="toast" />
-<view>
-  <i-card wx:for="{{cardList}}" title="{{item.title}}" extra="¥{{item.label}}" thumb="{{item.thumb}}" i-class="card_list">
-    <view slot="content">{{item.content}}</view>
-    <view slot="footer">{{item.footer}}</view>
-  </i-card>
+<view class="search_view">
+  <search-input selectValue="{{selectValue}}" bind:ok="bindKeyInput" placeholder="请输入搜索内容"></search-input>
+</view>
+<view class="tab_view">
+  <i-tabs current="{{ current_scroll }}" scroll bindchange="handleChangeScroll">
+    <i-tab wx:for="{{scrollTab}}" key="{{item.key}}" title="{{item.title}}" i-class="tab_list"></i-tab>
+  </i-tabs>
+</view>
+<view class="box_view">
+  <view class="list_view" wx:for="{{listData}}" wx:key="{{item.id}}">
+    <view class="lv_title">{{item.title}}</view>
+    <view class="lv_date">{{item.name}} | {{item.date}}</view>
+    <view class="lv_txt">{{item.message}}</view>
+    <view class="lv_zan">
+      <i-icon type="emoji" size="20" color="#bbb" />{{item.praise_num}}
+      <i-icon type="message" size="20" color="#bbb" />{{item.comment_num}}
+      <i-tag class="i-tags" i-class="lv_tag" name="{{item.subhead}}">
+        {{item.subhead}}
+      </i-tag>
+    </view>    
+  </view>
+  <i-divider content="加载已经完成,没有其他数据"></i-divider>
 </view>
