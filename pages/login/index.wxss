@@ -1,1 +1,74 @@
 /* pages/login/index.wxss */
+page {
+  border-top: 1rpx solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  padding: 50rpx 0;
+}
+
+.head_pic {
+  height: 180rpx;
+}
+
+.input_view {
+  margin-top: 60rpx;
+  padding-right: 30rpx;
+  position: relative;
+}
+
+.input_view .input_icon {
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+  z-index: 9;
+}
+.input_message {
+  position: absolute;
+  right: 10rpx;
+  width: 300rpx;
+  font-size: 26rpx;
+  color: #cccccc;
+  background: #ffffff;
+  top: -110rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 0 20rpx #aaaaaa;
+  padding: 20rpx;
+  z-index: 9;
+}
+.triangle {
+  position: absolute;
+  right: 30rpx;
+  bottom: -24rpx;
+  width: 0;
+  height: 0;
+  border: 8rpx solid transparent;
+  border-top: 16rpx solid #ffffff;
+  z-index: 9;
+}
+
+.verify_view {
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+}
+
+.button_view {
+  padding: 0 20rpx;
+}
+.button_view .login_button {
+  color: #ffffff!important;
+  background: #90bceb!important;
+}
+.button_view .register_button {
+  color: #2D8CF0 !important;
+  border: 1rpx solid #2D8CF0 !important;
+}
+
+.seek_password {
+  padding: 20rpx 40rpx;
+  text-align: right;
+  font-size: 28rpx;
+  color: #2D8CF0;
+}

@@ -1,0 +1,39 @@
+<!--pages/register/index.wxml-->
+<i-message id="message" />
+<i-toast id="toast" />
+<view style="padding: 20rpx 0;">
+  <view class="notice_view">
+    <i-row>
+      <i-col span="2" i-class="col-class">
+        <view style="text-align: center;">
+          <i-icon type="prompt" size="22" />
+        </view>
+      </i-col>
+      <i-col span="22" i-class="col-class">
+        <view>
+          为确保人像通过认证，在识别过程中，请处于明亮无背光环境中，并保持面部无遮挡（摘下眼镜等可能造成反光的物品）。
+        </view>
+      </i-col>
+    </i-row>
+  </view>
+</view>
+<view class="input_view">
+  <view class="enter_icon">
+    <i-icon type="enter" size="20" color="#cccccc" />
+  </view>
+  <i-input value="{{ verType }}" disabled title="证件类型" />
+  <i-input bind:blur="cerNoBlur" data-name="cerNo" value="{{ cerNo }}" type="number" title="证件号码" placeholder="请输入证件号码" />
+  <i-input bind:change="inputChangeValue" data-name="name" value="{{ name }}" title="姓名" placeholder="请输入姓名" />
+  <i-input disabled title="国际(地区)" placeholder="中华人民共和国" />
+</view>
+<view class="verify_view">
+  <move-verify bind:result="verificationResult"></move-verify>
+</view>
+<view class="protocol_view">
+  <image bindtap="checkedClick" solt="icon" class="checked_icon" mode="heightFix" src="{{checked?'../../images/icon-choiced.png':'../../images/icon-unchoice.png'}}" />
+  <view> 我已阅读并同意 <text style="color: #2D8CF0;">人脸识别注册认证功能授权协议</text></view>
+</view>
+
+<view class="button_view">
+  <i-button i-class="{{name == '' || cerNo == '' || !checked || !verify ? 'login_button' : ''}}" disabled="{{name == '' || cerNo == '' || !checked || !verify}}" bind:click="bindClick" type="primary" size="default">开始人脸识别</i-button>
+</view>

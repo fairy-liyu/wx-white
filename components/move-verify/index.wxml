@@ -1,0 +1,15 @@
+<!--components/move-verify/index.wxml-->
+<!-- 滑块验证 -->
+<view class='pathway' bindtouchend='onEnd' id='pathway'>
+  <view class="tips" style="{{isOk ? 'background: #7ac23c;' : ''}}">
+    <text wx:if="{{isOk}}">验证通过</text>
+    <text wx:else>请按住滑块，拖动到最右边</text>
+    <view class="block"></view>
+  </view>
+  <view class="track"></view>
+  <movable-area>
+    <movable-view x="{{x}}" direction="horizontal" bindchange="onChange" class='{{isOk ? "active":""}}' id="track">
+    </movable-view>
+  </movable-area>
+  <view class="disabled" wx:if="{{isOk}}"></view>
+</view>

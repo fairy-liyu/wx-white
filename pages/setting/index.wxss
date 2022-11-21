@@ -1,0 +1,15 @@
+/* pages/setting/index.wxss */
+page {
+   background: #eeeeee;
+}
+.head_pic {
+  position: absolute;
+  right: 30rpx;
+  top: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.group-box {
+  color: #333333 !important;
+}

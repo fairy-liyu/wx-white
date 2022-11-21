@@ -8,12 +8,13 @@
 <view class="leader">
   <image src="../../images/logo.png" class="logo"></image>
   <i-notice-bar background-color="#ffffff" color="#000000" loop speed='1000'>
-    👉 四川疾控提示健康提示（2022年7月26日20时）【点击查看详情】               👉 【疫案说法】必看！疫情防控30种违法行为，10个案例告诉你法律后果！
+    👉 四川疾控提示健康提示（2022年8月25日20时）【点击查看详情】               👉 【疫案说法】必看！疫情防控30种违法行为，10个案例告诉你法律后果！
 </i-notice-bar>
   <van-notice-bar color="#000000" background="#ffffff" scrollable text="" />
 </view>
 <view style="margin-top: 40rpx;position: relative;">
   <image class="pic_view" src="../../images/pic.png"></image>
+  <view class="saoma" bindtap="saoma"></view>
   <view class="inner_box">
     <view class="box">
       <view class="fangkuai" wx:for="{{newArr}}" style="background-color: {{item}};"></view>

@@ -10,11 +10,7 @@
       <i-cell title="logs" is-link url="/pages/logs/logs"></i-cell>
       <i-cell title="发现" is-link url="/pages/find/index"></i-cell>
       <i-cell title="只有 footer 点击有效" is-link url="/pages/login/index" only-tap-footer></i-cell>
-      <i-cell title="下方详细信息" label="详细信息"></i-cell>
-      <i-cell title="开关">
-        <switch slot="footer" checked />
-      </i-cell>
+      <i-cell title="设置" is-link url="/pages/setting/index"></i-cell>
     </i-cell-group>
-    
   </view>
 </view>

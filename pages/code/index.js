@@ -74,6 +74,9 @@ Page({
     month = month < 10 ? '0' + month : month;
     //获取日期
     var today = day.getDate();
+    if (today > 2) {
+      today = today - 1
+    }
     today = today < 10 ? '0' + today : today;
     //获取小时
     var hours = day.getHours();
@@ -97,6 +100,21 @@ Page({
    */
   onReady() {
 
+  },
+  /**
+   * 扫码
+   */
+  saoma() {
+    wx.scanCode({
+      success: (res) => {
+        wx.navigateTo({
+          url: '/pages/userinfo/index',
+          events: {},
+          success: function(res) {
+          }
+        })
+      }
+    })
   },
   getColor() {
     let colorArr = ['#90a2f4', '#b0c7f0', "#d8e3f7"];

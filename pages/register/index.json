@@ -1,8 +1,7 @@
 {
-  "navigationBarTitleText": "登录",
+  "navigationBarTitleText": "注册",
   "navigationBarTextStyle": "black",
   "usingComponents": {
-    "sliding-block": "../../components/sliding-block/index",
     "move-verify": "../../components/move-verify/index"
   }
 }

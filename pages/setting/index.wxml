@@ -1,0 +1,13 @@
+<!--pages/setting/index.wxml-->
+
+<i-cell-group>
+  <i-cell title="头像" is-link i-class="group-box" bind:click="getHead">
+    <image src="{{userInfo.avatarUrl}}" class="head_pic"></image>
+  </i-cell>
+  <i-cell i-class="group-box" title="昵称" is-link bind:click="getHead" value="{{userInfo.nickName}}"></i-cell>
+  <i-input  i-class="group-box" value="{{ userInfo.name }}" data-name="userInfo.name" bind:change="getInputValue" right title="姓名" autofocus placeholder="姓名" />
+  <i-input  i-class="group-box" value="{{ userInfo.telphone }}" data-name="userInfo.telphone" bind:change="getInputValue" right type="number" title="联系电话" placeholder="请输入手机号" />
+  <i-cell i-class="group-box" title="详细地址" is-link value="{{userInfo.address}}" bind:click="getAddress"></i-cell>
+</i-cell-group>
+
+<i-button bind:click="handleClick" type="primary" shape="circle">确认</i-button>

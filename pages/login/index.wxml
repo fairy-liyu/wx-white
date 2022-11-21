@@ -1,2 +1,28 @@
 <!--pages/login/index.wxml-->
 <i-toast id="toast" />
+<view bindtap="closeMessage">
+  <view class="header">
+    <image src="../../images/head.png" mode="heightFix" class="head_pic"></image>
+  </view>
+  <view class="input_view">
+    <view class="input_icon" catchtap="openMessage">
+      <i-icon type="feedback" size="20" color="#2D8CF0" />
+    </view>
+    <view class="input_message" wx:if="{{showMessage}}">
+      <text>使用外国护照注册的用户,请使用手机号登录</text>
+      <view class="triangle"></view>
+    </view>
+    <i-input value="{{ name }}" bind:change="getInputValue" data-name="name" title="账号" autofocus placeholder="手机号码/证件号码" />
+    <i-input value="{{ password }}" bind:change="getInputValue" data-name="password" type="password" title="密码" placeholder="请输入密码" />
+  </view>
+  <view class="verify_view">
+    <move-verify bind:result="verificationResult"></move-verify>
+  </view>
+  <view class="seek_password">
+    <text>找回密码</text>
+  </view>
+  <view class="button_view">
+    <i-button i-class="{{name == '' || password == '' ? 'login_button' : ''}}" disabled="{{name == '' || password == ''}}" bind:click="loginClick" type="primary" size="default">登录</i-button>
+    <i-button i-class="register_button" bind:click="registerClick" type="ghost" size="default">注册</i-button>
+  </view>
+</view>

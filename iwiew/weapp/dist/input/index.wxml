@@ -1,5 +1,7 @@
 <view class="i-class i-cell i-input {{ error ? 'i-input-error' : '' }} {{ mode === 'wrapped' ? 'i-input-wrapped' : '' }}">
-    <view wx:if="{{ title }}" class="i-cell-hd i-input-title">{{ title }}</view>
+    <view wx:if="{{ title }}" class="i-cell-hd i-input-title">
+    <span style="color: red;" wx:if="{{required}}">*</span>
+    {{ title }}</view>
     <textarea
         wx:if="{{ type === 'textarea' }}"
         auto-height

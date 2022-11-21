@@ -37,8 +37,13 @@ Component({
             value: false
         },
         maxlength: {
-            type: Number
-        }
+            type: Number,
+            value: -1,
+        },
+        required: {
+          type: Boolean,
+          value: false
+        },
     },
 
     methods: {
@@ -46,14 +51,12 @@ Component({
             const { detail = {} } = event;
             const { value = '' } = detail;
             this.setData({ value });
-
             this.triggerEvent('change', event);
         },
 
         handleInputFocus(event) {
             this.triggerEvent('focus', event);
         },
-
         handleInputBlur(event) {
             this.triggerEvent('blur', event);
         }

@@ -1,16 +1,19 @@
 {
+  "entryPagePath": "pages/login/index",
   "pages": [
+    "pages/code/index",
     "pages/home/index",
     "pages/login/index",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/my/index",
-    "pages/code/index",
+    "pages/fire/index",
+    "pages/subject/index",
+    "pages/logs/logs",
     "pages/weappCode/index",
     "pages/userinfo/index",
     "pages/find/index",
-    "pages/fire/index",
-    "pages/subject/index"
+    "pages/setting/index",
+    "pages/register/index"
   ],
   "usingComponents": {
     "i-icon": "./iwiew/weapp/dist/icon/index",
@@ -80,10 +83,6 @@
         "text": "沸点"
       },
       {
-        "pagePath": "pages/subject/index",
-        "text": "课程"
-      },
-      {
         "pagePath": "pages/index/index",
         "text": "联系人"
       },
@@ -97,5 +96,16 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.9",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  }
 }
