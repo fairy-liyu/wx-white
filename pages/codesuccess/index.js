@@ -1,3 +1,4 @@
+// pages/codesuccess/index.js
 // pages/code/index.js
 Page({
 
@@ -100,18 +101,6 @@ Page({
    */
   onReady() {
 
-  },
-  /**
-   * 扫码
-   */
-  saoma() {
-    wx.scanCode({
-      success: (res) => {
-        wx.navigateTo({
-          url: '/pages/codesuccess/index',
-        })
-      }
-    })
   },
   getColor() {
     let colorArr = ['#90a2f4', '#b0c7f0', "#d8e3f7"];

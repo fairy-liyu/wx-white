@@ -1,0 +1,213 @@
+/* pages/code/index.wxss */
+page {
+  background-color: rgb(64, 87, 219);
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  width: 100vw;
+  padding-bottom: 200rpx;
+  height: 100vh;
+}
+
+.saoma {
+  width: 400rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 139rpx;
+  top: 668rpx;
+  border-radius: 50rpx;
+  background: transparent;
+}
+
+.background_box {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  height: 580rpx;
+  pointer-events: none;
+  z-index: -10;
+}
+
+.top_background {
+  height: 580rpx;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+
+.app_name {
+  text-align: center;
+  padding-top: 100rpx;
+  font-size: 38rpx;
+  color: #fff;
+}
+
+.leader {
+  background-color: #fff;
+  width: 100%;
+  background-color: #fff;
+  padding: 20rpx 40rpx;
+  border-radius: 10rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  left: 20rpx;
+  top: 15rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.pic_view {
+  width: 100%;
+  height: 1000rpx;
+}
+
+.date_view {
+  position: absolute;
+  left: 0;
+  top: 200rpx;
+  font-size: 42rpx;
+  /* color: #4057db; */
+  text-align: center;
+  width: 100%;
+}
+
+.date2_view {
+  position: absolute;
+  left: 47rpx;
+  bottom: 100rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.pic2_view {
+  width: 100%;
+  height: 500rpx;
+}
+
+.inner_box {
+  position: absolute;
+  left: 0;
+  bottom: 240rpx;
+  width: 100%;
+  font-size: 46rpx;
+  text-align: center;
+  overflow: hidden;
+  color: #6caa73;
+}
+
+.box {
+  width: 10000%;
+  /* transform:translateX(100px); */
+  /* ease-in-out infinite alternate paused */
+}
+
+.fangkuai {
+  background: red;
+  transform: skew(-45deg);
+  width: 20rpx;
+  display: inline-block;
+  height: 12rpx;
+  margin-right: 10rpx;
+}
+
+.icon_footer {
+  padding-top: 40rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 120rpx;
+}
+
+.footer_box {
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #cccccc;
+  padding-bottom: 80rpx;
+}
+
+.txk_box {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 10rpx 40rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.zhixiang_icon {
+  transform: rotate(-90deg);
+  width: 60rpx;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  background-color: #6da67333;
+}
+
+.dc_icon {
+  width: 180rpx;
+  position: absolute;
+  right: 40rpx;
+  top: -20rpx;
+  transform: rotate(-90deg);
+}
+
+.heart {
+  position: relative;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+
+  /*动画帧*/
+  50% {
+    transform: scale(1.4);
+    background: linear-gradient(to top, rgba(157, 204, 179, 0.226), rgba(157, 204, 179, 0.226));
+    background: linear-gradient(to top, rgba(157, 204, 179, 0.226), rgba(157, 204, 179, 0.226));
+  }
+}
+
+.heart_innter {
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #4ba474;
+  border-radius: 100%;
+  border: 5rpx solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clickBtn {
+  background-color: #fff;
+  border-radius: 20rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  text-align: center;
+  font-size: 22rpx;
+  font-weight: bold;
+  color: #4ba474;
+  letter-spacing: 2rpx;
+  right: 46rpx;
+  width: 270rpx;
+  position: absolute;
+  top: 920rpx;
+}

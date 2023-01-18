@@ -1,0 +1,44 @@
+<!--pages/code/index.wxml-->
+<i-toast id="toast" />
+<view class="background_box">
+  <view class="app_name">场所登记信息</view>
+  <!-- <image class="top_background" src="../../images/bg4.png"></image> -->
+</view>
+<view style="height: 200rpx;"></view>
+<view class="leader">
+  <view style="font-size: 38rpx;font-weight: bold;line-height: 60rpx;">中国工商银行后台中心</view>
+  <view style="font-size: 24rpx; color: goldenrod;">办公楼</view>
+  <view style="font-size: 28rpx;line-height: 60rpx;">四川省/成都市/高新区</view>
+  <view style="font-size: 26rpx;color: #ccc; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">中国四川省成都市武侯区高新区益州大道中段1266号工行后台中心2楼</view>
+</view>
+<view style="margin-top: 20rpx;position: relative;">
+  <image class="pic_view" src="../../images/pic222.png"></image>
+  <view class="inner_box">
+    绿码：健康状态为低风险
+  </view>
+  <view class="clickBtn">点击更新</view>
+  <view class="date_view">
+    <view>{{date}} {{time}}:{{time2}}</view>
+    <view style="padding-top: 100rpx;display: flex;justify-content: center;align-items: center;">
+      <view class="heart">
+      <view class="heart_innter">
+        <i-icon type="right" size="46" color="#fff" />
+      </view>
+      </view>
+    </view>
+  </view>
+  <view class="date2_view">
+    {{dateY}}
+  </view>
+</view>
+<view class="txk_box">
+  <image class="zhixiang_icon" mode="widthFix" src="../../images/指向.png"></image>
+  <view style="font-size: 32rpx;padding-left: 20rpx;">通信形成卡
+    <i-icon type="enter" size="20" />
+  </view>
+  <image class="dc_icon" mode="widthFix" src="../../images/指向2.png"></image>
+</view>
+<view class="footer_box">
+  <view>四川省应对新型冠状病毒肺炎疫情应急指挥部</view>
+  <view>四川省大数据中心提供支持</view>
+</view>

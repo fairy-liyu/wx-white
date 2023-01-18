@@ -1,5 +1,5 @@
 {
-  "entryPagePath": "pages/login/index",
+  "entryPagePath": "pages/code/index",
   "pages": [
     "pages/code/index",
     "pages/home/index",
@@ -13,7 +13,8 @@
     "pages/userinfo/index",
     "pages/find/index",
     "pages/setting/index",
-    "pages/register/index"
+    "pages/register/index",
+    "pages/codesuccess/index"
   ],
   "usingComponents": {
     "i-icon": "./iwiew/weapp/dist/icon/index",
